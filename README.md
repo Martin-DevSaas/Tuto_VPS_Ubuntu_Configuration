@@ -167,21 +167,7 @@ cd /etc/nginx/sites-enabled
 sudo systemctl reload nginx
 ```
 
-## 4. Extra permission SSH for transfert local file to the serveur :
-```bash
-sudo chown <username>/var/www/<domainname>/
-```
-```bash
-ls -l
-```
-```bash
-sudo chmod 777 /var/www/<domainname>/
-```
-```bash
-ls -l
-```
-
-## 5. Certificat SSL for the domain name :
+## 4. Certificat SSL for the domain name :
 
 ### Installation of Certbot :
 ```bash
@@ -257,7 +243,7 @@ sudo certbot certificates
 sudo systemctl reload nginx
 ```
 
-## 6. Installation of PHP 8.3 :
+## 5. Installation of PHP 8.3 :
 
 ```bash
 sudo apt -y install php8.3 php8.3-mbstring php.pear
@@ -315,7 +301,7 @@ sudo systemctl reload php8.3-fpm nginx
 sudo echo '<?php phpinfo(); ?>' > /var/www/<domainname>/info.php
 ```
 
-## 7. Installation of mySQL :
+## 6. Installation of mySQL :
 
 ```bash
 sudo apt -y install mysql-server-8.0
@@ -374,7 +360,7 @@ use <databasename>;
 flush privileges;
 ```
 
-## 8. Create the link betwwen github repository and VPS with devops CI/CD :
+## 7. Create the link betwwen github repository and VPS with devops CI/CD :
 
 ### Go to the repository GitHub and add the actions secrets :
 
@@ -606,7 +592,7 @@ sudo chmod 777 /var/www/<repositoryname>/
 ls -l
 ```
 
-## 9. Creation of proxy stystem :
+## 8. Creation of proxy stystem :
 
 ```bash
 sudo ufw status
@@ -653,7 +639,7 @@ Location /api {
 }
 ```
 
-## 10. Run any file, code in background of your server :
+## 9. Run any file, code in background of your server :
 
 ```bash
 cd <your path with the file proxy.js>
@@ -681,7 +667,7 @@ const privateKey = fs.readFileSync('/etc/letsencrypt/archive/<domainname>.<termi
 const certificate = fs.readFileSync('/etc/letsencrypt/archive/<domainname>.<terminaison>/fullchain<changenumber>.pem', 'utf8');
 ```
 
-## 11. Restart Server :
+## 10. Restart Server :
 ```bash
 systemctl status mysql
 systemctl status nginx
