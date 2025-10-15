@@ -260,12 +260,6 @@ sudo chown <username> /var/www/html/
 ls -l
 ```
 ```bash
-sudo chmod 777 /var/www/html/
-```
-```bash
-ls -l
-```
-```bash
 cd /var/www/html/
 ```
 ```bash
@@ -581,12 +575,6 @@ ls -l
 ```
 ```bash
 cd /var/www/
-```
-```bash
-ls -l
-```
-```bash
-sudo chmod 777 /var/www/<repositoryname>/
 ```
 ```bash
 ls -l
