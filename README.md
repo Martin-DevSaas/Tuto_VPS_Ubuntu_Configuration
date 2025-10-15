@@ -55,29 +55,15 @@ su - <username>
 
 ### First Security check, change number of port :
 ```bash
-sudo systemctl edit ssh.socket
+sudo nano /etc/ssh/sshd_config
 ```
 
 #### in this file you need to add or change this value :
 ```bash
-[Socket]
-ListenStream =
-ListenStream = <numberport>
+Port <newport>
 ```
 
 ##### execute this instruction with the touch countrol on your laptop keyboard and after Enter :
-```bash
-ctrl+O µthe letter O
-enter
-```
-```bash
-ctrl+X
-```
-
-
-```bash
-sudo systemctl daemon-reload
-```
 ```bash
 sudo systemctl restart ssh
 ```
