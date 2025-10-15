@@ -187,7 +187,7 @@ server {
        ssl_certificate "/etc/letsencrypt/live/<domainname>.<terminaison>/fullchain.pem";
        ssl_certificate_key "/etc/letsencrypt/live/<domainname>.<terminaison>/privkey.pem";
 
-       # Redirection de www.cefinan.com vers cefinan.com en HTTPS
+       # Redirection de www.domainname.com vers domainename.com en HTTPS
        return 301 https://<domainname>.<terminaison>$request_uri;
 }
 
